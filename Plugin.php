@@ -9,7 +9,7 @@ class Plugin extends Base
 {
   public function initialize()
   {
-    $this->template->setTemplateOverride('board/table_column', 'removeswimlanedetails:board/table_column');
+    $this->template->setTemplateOverride('board/table_column', 'removeSwimlaneDetails:board/table_column');
 
   }
   public function getPluginName()
