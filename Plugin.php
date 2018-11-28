@@ -10,7 +10,8 @@ class Plugin extends Base
   public function initialize()
   {
     $this->template->setTemplateOverride('board/table_column', 'removeSwimlaneDetails:board/table_column');
-
+    $this->template->setTemplateOverride('config/board', 'removeSwimlaneDetails:config/board');
+    $this->template->hook->attach('template:config:board', 'removeSwimlaneDetails:config/toggle', array('hide_swimlane_tcounts' => $this->configModel->get('hide_swimlane_tcounts')));
   }
   public function getPluginName()
   {
